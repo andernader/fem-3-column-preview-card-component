@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+
+    /*
+        font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lexend Deca', sans-serif;
+    */
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+
+    display: grid;
+    place-items: center;
+    background-color: var(--Very-light-gray);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 300px;
+        margin: 1em 0;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3em;
+    height: 450px;
+}
+
+section img {
+    max-width: 75px;
+}
+
+section h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: .7em 0;
+    font-size: 2.5em;
+    color: var(--Very-light-gray);
+}
+
+section p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--Transparent-white);
+}
+
+section button {
+    border: none;
+    background-color: var(--Very-light-gray);
+    padding: 1em 2em;
+    border-radius: 25px;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    width: fit-content;
+    margin-top: auto;
+    cursor: pointer;
+    color: currentColor;
+    box-sizing: border-box;
+}
+
+.section-sedans {
+    background-color: var(--Bright-orange);
+    color: var(--Bright-orange);
+}
+
+.section-sedans button:hover {
+    background-color: var(--Bright-orange);
+    border: 2px solid white;
+    color: var(--Very-light-gray);
+}
+
+.section-suvs {
+    background-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+}
+
+.section-suvs button:hover {
+    background-color: var(--Dark-cyan);
+    border: 2px solid white;
+    color: var(--Very-light-gray);
+}
+
+.section-luxury {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.section-luxury button:hover {
+    background-color: var(--Very-dark-cyan);
+    border: 2px solid white;
+    color: var(--Very-light-gray);
+}
